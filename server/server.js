@@ -3,6 +3,12 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const axios = require("axios");
 const cheerio = require("cheerio");
+require('dotenv').config();
+
+// Access the API key
+const apiKey = process.env.GEMINI_API_KEY;
+
+
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const app = express();
@@ -11,8 +17,8 @@ const PORT = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-const API_KEY = "AIzaSyD5NLa1qmqZBXWKxhmwzNPOUqtyfGsu4qY"; 
-const genAI = new GoogleGenerativeAI(API_KEY);
+ 
+const genAI = new GoogleGenerativeAI(apiKey);
 
 // Endpoint to summarize a webpage URL
 app.post("/summarize-url", async (req, res) => {
