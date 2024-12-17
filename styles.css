@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 300px;
+  }
+  
+  button {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
